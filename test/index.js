@@ -40,6 +40,13 @@ describe('#idCard#', function() {
       });
       idCard.verify(randIdcard).should.be.true();
     });
+    it('it must be ok', function() {
+      var randIdcard = idCard.generateIdcard({
+        birthday: 19910210
+      });
+      idCard.verify(randIdcard).should.be.true();
+      idCard.info(randIdcard).birthday.should.be.equal(19910210);
+    });
   });
   describe('info()', function() {
     it('it must be not ok', function() {

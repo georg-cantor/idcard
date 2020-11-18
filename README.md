@@ -47,17 +47,17 @@ idCard.info('440882199100201232');
 //身份证合法时返回的数据结构
 { 
 	valid: true,//身份证是否合法的标志
-	gender: 'M',//M->男，F->女
-	birthday: 19910210,//
-	province: {
+	gender: 'M',//M->男，F->女, MUST
+	birthday: 19910210,// , MUST
+	province: {//, MUST
 		code: '440000',//行政区域编码
 		text: '广东省' 
 	},
-	city: { 
+	city: { //, MUST
 		code: '440800', 
 		text: '湛江市' 
 	},
-	area: { 
+	area: { //, MUST
 		code: '440882', 
 		text: '雷州市' 
 	},
